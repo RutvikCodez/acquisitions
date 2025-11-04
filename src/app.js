@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(
   morgan('combined', { stream: { write: msg => logger.info(msg.trim()) } })
 );
-app.use(securityMiddleware)
+app.use(securityMiddleware);
 
 app.get('/', (req, res) => {
   logger.info('Hello from Acquisitions!');
