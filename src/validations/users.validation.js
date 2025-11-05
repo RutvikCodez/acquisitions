@@ -1,7 +1,10 @@
 import { z } from 'zod';
 
 export const userIdSchema = z.object({
-  id: z.coerce.number().int().positive({ message: 'id must be a positive integer' }),
+  id: z.coerce
+    .number()
+    .int()
+    .positive({ message: 'id must be a positive integer' }),
 });
 
 export const updateUserSchema = z
